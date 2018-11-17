@@ -19,8 +19,8 @@
             // vi tri trong kho hang
             $lil = $this->input->post('lil');
             $asia24 = $this->input->post('asia24');
-            $out_size = $this->input->post('out_size');
-            $html_content .= $this->m_htmltopdf->pdf_day($date_time, $date_time_end, $week, $month, $year, $lil, $asia24, $out_size);
+            $outside = $this->input->post('outside);
+            $html_content .= $this->m_htmltopdf->pdf_day($date_time, $date_time_end, $week, $month, $year, $lil, $asia24, $outside);
             $this->pdf->loadHtml($html_content);
             $this->pdf->render();
             $this->pdf->stream("".$date_time.".pdf", array("Attachment"=>0));
